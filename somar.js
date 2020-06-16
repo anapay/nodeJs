@@ -1,6 +1,7 @@
 
 
-var somar = function (a, b) {
+var soma = function (a, b) {
   return a + b
 }
-module.exports = somar;
+
+module.exports = soma;
