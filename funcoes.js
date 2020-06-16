@@ -1,14 +1,17 @@
 
-var somaFunc = require("./somar.js"); 
+var somaFunc = require("./somar.js");
 
-console.log(somaFunc(1,3));
+console.log(somaFunc(1, 3));
 
 var subFunc = require("./subtrair.js");
 
-console.log(subFunc(2,2));
+console.log(subFunc(2, 2));
 
 var mulFunc = require("./mult");
 
-console.log(mulFunc(2,3));
+console.log(mulFunc(2, 3));
 
 var divFunc = require("./div")
+
+console.log(divFunc(20, 3));
+
