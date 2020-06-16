@@ -1,4 +1,8 @@
-function subtrair(a,b){
-  return a-b
+
+
+var subtrair = function (a, b) {
+  return a - b;
 }
+
+
 module.exports = subtrair;

@@ -2,7 +2,7 @@
 var somaFunc = function(a,b){
   return a+b;
 }
-var subFunc = function(a;b){
+var subFunc = function(a,b){
   return a-b;
 }
 var multFunc = function(a,b){
