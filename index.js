@@ -3,25 +3,25 @@ const express = require("express");
 const app = express();
 
 app.get("/", function (req, res) {
-    
-    res.send("welcome to my app!")
-//atravez da função send dentro do objeto res estou enviando uma mensagem
+
+    res.sendFile(__dirname + "/html/index.html");
+
 });
 
 app.get("/on", function (req, res) {
 
-    res.send("About this page")
-    
+    res.sendFile(__dirname + "/")
+
 });
 
 app.get("/blog", function (rq, res) {
-    res.send("Welcome to my blog!")
-    
+    res.sendFile(__dirname + "/")
+
 });
 
 app.get("/Hi/:name/:office/:mother", function (req, res) {
-    res.send("<h1>Hi! " +req.params.name+"</h1>"+"<h2>your profession " +req.params.office+ "</h2>"+"<h3>mother " + req.params.mother +"</h3>");
-//adicionando parametros
+    res.send("<h1>Hi! " + req.params.name + "</h1>" + "<h2>your profession " + req.params.office + "</h2>" + "<h3>mother " + req.params.mother + "</h3>");
+    //adicionando parametros
 });
 
 
