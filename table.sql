@@ -50,3 +50,9 @@ DELETE FROM usuarios;
 --deletando um dado especifico;
 DELETE FROM  ususarios WHERE nome = "joao";
 --estou dizendo que na tabela usuarios na registro nome delete o registro que tem o nome joao;
+
+--Atualizando tabela;
+UPDATE usuarios SET nome = "ANA" WHERE nome = "Anna";
+--atualize a coluna nome dentro da tabela usuarios do dado que tem o nome ANA;
+UPDATE usuarios SET nome = "ANA" WHERE nome = "Anna", email = "asdlflgkkjhj" WHERE email = "ASDECRGSHHDK";
+--Atualizando mais de um registro;
