@@ -12,6 +12,10 @@ CREATE TABLE usuarios(
     mensagem VARCHAR(255)
 
 );
+--listando bancos do sistema;
+SHOW DATABASE;
+--listamdo tabelas;
+SHOW TABLE;
 
 --inserindo dados na tabela;
 INSERT INTO usuarios(nome, email, telefone, mensagem) VALUES(
