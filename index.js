@@ -15,7 +15,7 @@ app.get("/on", function (req, res) {
 });
 
 app.get("/blog", function (rq, res) {
-    res.sendFile(__dirname + "/")
+    res.sendFile(__dirname + "/h")
 
 });
 
