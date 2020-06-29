@@ -12,8 +12,23 @@ const sequelize = new Sequelize('app', 'root', 'joao', {
 });
 
 // config template engine
+
 app.engine('handlebars', handlebars({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
+
+
+//rotas 
+
+app.get('/cad', function(req, res){
+    res.render('formulario')
+
+})
+
+
+
+
+
+
 
 
 app.listen(8081, function () {
