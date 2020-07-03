@@ -20,13 +20,13 @@ app.use(bodyParser.json())
 
 //rotas 
 
-app.get("/", function(req, res){
-    Post.findAll().then(function(posts){
+app.get("/", function (req, res) {
+    Post.findAll({ raw: true }).then(function (posts) {
         console.log(posts)
-        res.render("home", {posts: posts})
+        res.render("home", { posts: posts })
 
     })
-  
+
 })
 
 app.get("/cad", function (req, res) {
@@ -43,14 +43,19 @@ app.post("/enviar", function (req, res) {
     }).then(function () {
         res.redirect("/")
     }).catch(function () {
-        res.send("Erro ao criar post!" +erro)
+        res.send("Erro ao criar post!" + erro)
     })
+})
+app.get("/deletar/:id", function (req, res) {
+    Post.destroy({ where: { "id": req.params.id } }).then(function () {
+        res.send("Postagem deletada com sucesso!")
+    }).catch(function (erro) {
+        res.send("Esse post não existe")
 
-
+    })
 })
 
-
-app.listen(8888, function () {
-    console.log("Server initialized url http://localhost:8888")
+app.listen(8891, function () {
+    console.log("Server initialized url http://localhost:8891")
 
 });
